@@ -1,0 +1,374 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B424C0C1DDA6D17003C5DEF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B424C0B1DDA6D17003C5DEF /* main.swift */; };
+		5B424C131DDA6D3A003C5DEF /* BufferEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B424C121DDA6D3A003C5DEF /* BufferEntry.swift */; };
+		5B424C151DDA6E40003C5DEF /* FeatureInfoMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B424C141DDA6E40003C5DEF /* FeatureInfoMap.swift */; };
+		5B424C191DDBAE56003C5DEF /* ScriptUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B424C181DDBAE56003C5DEF /* ScriptUtils.swift */; };
+		5B54F90E1DE0F62000BB1909 /* DataOutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F90D1DE0F62000BB1909 /* DataOutputStream.swift */; };
+		5B54F90F1DE114BC00BB1909 /* CharacterDefinitionsCompiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B61E2AD1DDE5D17007310E1 /* CharacterDefinitionsCompiler.swift */; };
+		5B54F9111DE1D11900BB1909 /* DictionaryEntryLineParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9101DE1D11900BB1909 /* DictionaryEntryLineParser.swift */; };
+		5B54F9131DE1D31700BB1909 /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9121DE1D31700BB1909 /* CSVParser.swift */; };
+		5B54F9161DE1ED5D00BB1909 /* DictionaryEntryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9151DE1ED5D00BB1909 /* DictionaryEntryBase.swift */; };
+		5B54F9181DE1EEB100BB1909 /* GenericDictionaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9171DE1EEB100BB1909 /* GenericDictionaryEntry.swift */; };
+		5B54F91A1DE1F0DF00BB1909 /* UnknownDictionaryCompiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9191DE1F0DF00BB1909 /* UnknownDictionaryCompiler.swift */; };
+		5B54F91C1DE213FD00BB1909 /* StringArrayIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F91B1DE213FD00BB1909 /* StringArrayIO.swift */; };
+		5B54F91E1DE2141500BB1909 /* IntegerArrayIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F91D1DE2141500BB1909 /* IntegerArrayIO.swift */; };
+		5B61E2AB1DDE5CCC007310E1 /* Compiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B61E2AA1DDE5CCC007310E1 /* Compiler.swift */; };
+		5B61E2B11DDE6690007310E1 /* BufferedReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B61E2B01DDE6690007310E1 /* BufferedReader.swift */; };
+		5B61E2B31DDE67ED007310E1 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B61E2B21DDE67ED007310E1 /* StringUtils.swift */; };
+		5B7011F81DDBDA770071FA8F /* StringValueMapBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B424C161DDA7355003C5DEF /* StringValueMapBuffer.swift */; };
+		5B7011FA1DDBF98E0071FA8F /* ByteBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7011F91DDBF98E0071FA8F /* ByteBuffer.swift */; };
+		5B7011FC1DDBF9F70071FA8F /* TokenInfoBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7011FB1DDBF9F70071FA8F /* TokenInfoBuffer.swift */; };
+		5B7011FE1DDC00900071FA8F /* WordIdMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7011FD1DDC00900071FA8F /* WordIdMap.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5B424C061DDA6D17003C5DEF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5B424C081DDA6D17003C5DEF /* kuromoji-swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "kuromoji-swift"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B424C0B1DDA6D17003C5DEF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		5B424C121DDA6D3A003C5DEF /* BufferEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferEntry.swift; sourceTree = "<group>"; };
+		5B424C141DDA6E40003C5DEF /* FeatureInfoMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureInfoMap.swift; sourceTree = "<group>"; };
+		5B424C161DDA7355003C5DEF /* StringValueMapBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringValueMapBuffer.swift; sourceTree = "<group>"; };
+		5B424C181DDBAE56003C5DEF /* ScriptUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptUtils.swift; sourceTree = "<group>"; };
+		5B54F90D1DE0F62000BB1909 /* DataOutputStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataOutputStream.swift; sourceTree = "<group>"; };
+		5B54F9101DE1D11900BB1909 /* DictionaryEntryLineParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryEntryLineParser.swift; sourceTree = "<group>"; };
+		5B54F9121DE1D31700BB1909 /* CSVParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
+		5B54F9151DE1ED5D00BB1909 /* DictionaryEntryBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryEntryBase.swift; sourceTree = "<group>"; };
+		5B54F9171DE1EEB100BB1909 /* GenericDictionaryEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDictionaryEntry.swift; sourceTree = "<group>"; };
+		5B54F9191DE1F0DF00BB1909 /* UnknownDictionaryCompiler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnknownDictionaryCompiler.swift; sourceTree = "<group>"; };
+		5B54F91B1DE213FD00BB1909 /* StringArrayIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringArrayIO.swift; sourceTree = "<group>"; };
+		5B54F91D1DE2141500BB1909 /* IntegerArrayIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerArrayIO.swift; sourceTree = "<group>"; };
+		5B61E2AA1DDE5CCC007310E1 /* Compiler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Compiler.swift; sourceTree = "<group>"; };
+		5B61E2AD1DDE5D17007310E1 /* CharacterDefinitionsCompiler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDefinitionsCompiler.swift; sourceTree = "<group>"; };
+		5B61E2B01DDE6690007310E1 /* BufferedReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferedReader.swift; sourceTree = "<group>"; };
+		5B61E2B21DDE67ED007310E1 /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
+		5B7011F91DDBF98E0071FA8F /* ByteBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByteBuffer.swift; sourceTree = "<group>"; };
+		5B7011FB1DDBF9F70071FA8F /* TokenInfoBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenInfoBuffer.swift; sourceTree = "<group>"; };
+		5B7011FD1DDC00900071FA8F /* WordIdMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordIdMap.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B424C051DDA6D17003C5DEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B424BFF1DDA6D17003C5DEF = {
+			isa = PBXGroup;
+			children = (
+				5B424C0A1DDA6D17003C5DEF /* kuromoji-swift */,
+				5B424C091DDA6D17003C5DEF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B424C091DDA6D17003C5DEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B424C081DDA6D17003C5DEF /* kuromoji-swift */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B424C0A1DDA6D17003C5DEF /* kuromoji-swift */ = {
+			isa = PBXGroup;
+			children = (
+				5B424C0B1DDA6D17003C5DEF /* main.swift */,
+				5B54F9141DE1ED4D00BB1909 /* dict */,
+				5B61E2AF1DDE6671007310E1 /* io */,
+				5B61E2AC1DDE5CD1007310E1 /* compile */,
+				5B61E2A81DDE5C87007310E1 /* buffer */,
+				5B61E2A91DDE5C91007310E1 /* util */,
+			);
+			path = "kuromoji-swift";
+			sourceTree = "<group>";
+		};
+		5B54F9141DE1ED4D00BB1909 /* dict */ = {
+			isa = PBXGroup;
+			children = (
+				5B54F9151DE1ED5D00BB1909 /* DictionaryEntryBase.swift */,
+				5B54F9171DE1EEB100BB1909 /* GenericDictionaryEntry.swift */,
+			);
+			name = dict;
+			sourceTree = "<group>";
+		};
+		5B61E2A81DDE5C87007310E1 /* buffer */ = {
+			isa = PBXGroup;
+			children = (
+				5B424C121DDA6D3A003C5DEF /* BufferEntry.swift */,
+				5B424C141DDA6E40003C5DEF /* FeatureInfoMap.swift */,
+				5B424C161DDA7355003C5DEF /* StringValueMapBuffer.swift */,
+				5B7011FB1DDBF9F70071FA8F /* TokenInfoBuffer.swift */,
+				5B7011FD1DDC00900071FA8F /* WordIdMap.swift */,
+			);
+			name = buffer;
+			sourceTree = "<group>";
+		};
+		5B61E2A91DDE5C91007310E1 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				5B7011F91DDBF98E0071FA8F /* ByteBuffer.swift */,
+				5B424C181DDBAE56003C5DEF /* ScriptUtils.swift */,
+				5B61E2B21DDE67ED007310E1 /* StringUtils.swift */,
+				5B54F9101DE1D11900BB1909 /* DictionaryEntryLineParser.swift */,
+				5B54F9121DE1D31700BB1909 /* CSVParser.swift */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+		5B61E2AC1DDE5CD1007310E1 /* compile */ = {
+			isa = PBXGroup;
+			children = (
+				5B61E2AA1DDE5CCC007310E1 /* Compiler.swift */,
+				5B61E2AD1DDE5D17007310E1 /* CharacterDefinitionsCompiler.swift */,
+				5B54F9191DE1F0DF00BB1909 /* UnknownDictionaryCompiler.swift */,
+			);
+			name = compile;
+			sourceTree = "<group>";
+		};
+		5B61E2AF1DDE6671007310E1 /* io */ = {
+			isa = PBXGroup;
+			children = (
+				5B61E2B01DDE6690007310E1 /* BufferedReader.swift */,
+				5B54F90D1DE0F62000BB1909 /* DataOutputStream.swift */,
+				5B54F91B1DE213FD00BB1909 /* StringArrayIO.swift */,
+				5B54F91D1DE2141500BB1909 /* IntegerArrayIO.swift */,
+			);
+			name = io;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B424C071DDA6D17003C5DEF /* kuromoji-swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B424C0F1DDA6D17003C5DEF /* Build configuration list for PBXNativeTarget "kuromoji-swift" */;
+			buildPhases = (
+				5B424C041DDA6D17003C5DEF /* Sources */,
+				5B424C051DDA6D17003C5DEF /* Frameworks */,
+				5B424C061DDA6D17003C5DEF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "kuromoji-swift";
+			productName = "kuromoji-swift";
+			productReference = 5B424C081DDA6D17003C5DEF /* kuromoji-swift */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B424C001DDA6D17003C5DEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Cocoapps;
+				TargetAttributes = {
+					5B424C071DDA6D17003C5DEF = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5B424C031DDA6D17003C5DEF /* Build configuration list for PBXProject "kuromoji-swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5B424BFF1DDA6D17003C5DEF;
+			productRefGroup = 5B424C091DDA6D17003C5DEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B424C071DDA6D17003C5DEF /* kuromoji-swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B424C041DDA6D17003C5DEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B61E2B31DDE67ED007310E1 /* StringUtils.swift in Sources */,
+				5B424C191DDBAE56003C5DEF /* ScriptUtils.swift in Sources */,
+				5B54F90E1DE0F62000BB1909 /* DataOutputStream.swift in Sources */,
+				5B54F9131DE1D31700BB1909 /* CSVParser.swift in Sources */,
+				5B54F91C1DE213FD00BB1909 /* StringArrayIO.swift in Sources */,
+				5B61E2AB1DDE5CCC007310E1 /* Compiler.swift in Sources */,
+				5B7011FE1DDC00900071FA8F /* WordIdMap.swift in Sources */,
+				5B61E2B11DDE6690007310E1 /* BufferedReader.swift in Sources */,
+				5B7011FA1DDBF98E0071FA8F /* ByteBuffer.swift in Sources */,
+				5B54F9161DE1ED5D00BB1909 /* DictionaryEntryBase.swift in Sources */,
+				5B54F91A1DE1F0DF00BB1909 /* UnknownDictionaryCompiler.swift in Sources */,
+				5B424C151DDA6E40003C5DEF /* FeatureInfoMap.swift in Sources */,
+				5B424C131DDA6D3A003C5DEF /* BufferEntry.swift in Sources */,
+				5B54F90F1DE114BC00BB1909 /* CharacterDefinitionsCompiler.swift in Sources */,
+				5B54F9181DE1EEB100BB1909 /* GenericDictionaryEntry.swift in Sources */,
+				5B54F9111DE1D11900BB1909 /* DictionaryEntryLineParser.swift in Sources */,
+				5B424C0C1DDA6D17003C5DEF /* main.swift in Sources */,
+				5B7011F81DDBDA770071FA8F /* StringValueMapBuffer.swift in Sources */,
+				5B7011FC1DDBF9F70071FA8F /* TokenInfoBuffer.swift in Sources */,
+				5B54F91E1DE2141500BB1909 /* IntegerArrayIO.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5B424C0D1DDA6D17003C5DEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B424C0E1DDA6D17003C5DEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5B424C101DDA6D17003C5DEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5B424C111DDA6D17003C5DEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B424C031DDA6D17003C5DEF /* Build configuration list for PBXProject "kuromoji-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B424C0D1DDA6D17003C5DEF /* Debug */,
+				5B424C0E1DDA6D17003C5DEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B424C0F1DDA6D17003C5DEF /* Build configuration list for PBXNativeTarget "kuromoji-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B424C101DDA6D17003C5DEF /* Debug */,
+				5B424C111DDA6D17003C5DEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B424C001DDA6D17003C5DEF /* Project object */;
+}
