@@ -60,7 +60,7 @@ class StringValueMapBuffer {
     }
     
     public func write(_ output: OutputStream) {
-        output.write(buffer.buffer, maxLength: buffer.size);
+        output.write([UInt8](buffer.buffer), maxLength: buffer.size);
     }
     
     public func put(_ strings: [Int: String]) {

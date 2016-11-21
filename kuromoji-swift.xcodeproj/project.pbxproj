@@ -26,6 +26,8 @@
 		5B54F95C1DE219E400BB1909 /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F94A1DE219E400BB1909 /* CSVParser.swift */; };
 		5B54F95D1DE219E400BB1909 /* ScriptUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F94B1DE219E400BB1909 /* ScriptUtils.swift */; };
 		5B54F95E1DE219E400BB1909 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F94C1DE219E400BB1909 /* StringUtils.swift */; };
+		5B54F9601DE2596A00BB1909 /* ConnectionCostsCompiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F95F1DE2596A00BB1909 /* ConnectionCostsCompiler.swift */; };
+		5B54F9621DE25CF800BB1909 /* ShortBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9611DE25CF800BB1909 /* ShortBuffer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,6 +63,8 @@
 		5B54F94A1DE219E400BB1909 /* CSVParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
 		5B54F94B1DE219E400BB1909 /* ScriptUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptUtils.swift; sourceTree = "<group>"; };
 		5B54F94C1DE219E400BB1909 /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
+		5B54F95F1DE2596A00BB1909 /* ConnectionCostsCompiler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCostsCompiler.swift; sourceTree = "<group>"; };
+		5B54F9611DE25CF800BB1909 /* ShortBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortBuffer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 				5B54F93D1DE219E400BB1909 /* CharacterDefinitionsCompiler.swift */,
 				5B54F93E1DE219E400BB1909 /* Compiler.swift */,
 				5B54F93F1DE219E400BB1909 /* UnknownDictionaryCompiler.swift */,
+				5B54F95F1DE2596A00BB1909 /* ConnectionCostsCompiler.swift */,
 			);
 			path = compile;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				5B54F9491DE219E400BB1909 /* ByteBuffer.swift */,
+				5B54F9611DE25CF800BB1909 /* ShortBuffer.swift */,
 				5B54F94A1DE219E400BB1909 /* CSVParser.swift */,
 				5B54F94B1DE219E400BB1909 /* ScriptUtils.swift */,
 				5B54F94C1DE219E400BB1909 /* StringUtils.swift */,
@@ -217,6 +223,7 @@
 				5B54F95D1DE219E400BB1909 /* ScriptUtils.swift in Sources */,
 				5B54F94E1DE219E400BB1909 /* FeatureInfoMap.swift in Sources */,
 				5B54F9511DE219E400BB1909 /* WordIdMap.swift in Sources */,
+				5B54F9621DE25CF800BB1909 /* ShortBuffer.swift in Sources */,
 				5B54F9521DE219E400BB1909 /* CharacterDefinitionsCompiler.swift in Sources */,
 				5B54F94F1DE219E400BB1909 /* StringValueMapBuffer.swift in Sources */,
 				5B54F9561DE219E400BB1909 /* GenericDictionaryEntry.swift in Sources */,
@@ -233,6 +240,7 @@
 				5B54F9501DE219E400BB1909 /* TokenInfoBuffer.swift in Sources */,
 				5B424C0C1DDA6D17003C5DEF /* main.swift in Sources */,
 				5B54F9581DE219E400BB1909 /* DataOutputStream.swift in Sources */,
+				5B54F9601DE2596A00BB1909 /* ConnectionCostsCompiler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

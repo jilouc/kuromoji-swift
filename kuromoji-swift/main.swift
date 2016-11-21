@@ -31,3 +31,9 @@ let unkDicCompiler = UnknownDictionaryCompiler(categoryMap: charDefCompiler.make
 
 unkDicCompiler.readUnknownDefinitions(at: unkDefPath, encoding: .japaneseEUC)
 unkDicCompiler.compile()
+
+let matrixDefPath = InputDir + "/matrix.def"
+let matrixDefCompiler = ConnectionCostsCompiler(OutputStream(toFileAtPath: OutputDir + "/swift-compiled-matrix-def.data", append: false)!)
+
+matrixDefCompiler.readCosts(at: matrixDefPath)
+matrixDefCompiler.compile()
