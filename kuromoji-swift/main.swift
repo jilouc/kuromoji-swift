@@ -15,6 +15,13 @@ func getEnvironmentVar(_ name: String) -> String? {
     return String(utf8String: rawValue)
 }
 
+func printTimeElapsedWhenRunningCode(title:String, operation:()->()) {
+    let startTime = CFAbsoluteTimeGetCurrent()
+    operation()
+    let timeElapsed = CFAbsoluteTimeGetCurrent() - startTime
+    print("Time elapsed for \(title): \(timeElapsed) s")
+}
+
 let BaseDir = getEnvironmentVar("BASE_DIR")!
 let InputDir = BaseDir + "/tests/input"
 let OutputDir = BaseDir + "/tests/output"
@@ -32,8 +39,11 @@ let unkDicCompiler = UnknownDictionaryCompiler(categoryMap: charDefCompiler.make
 unkDicCompiler.readUnknownDefinitions(at: unkDefPath, encoding: .japaneseEUC)
 unkDicCompiler.compile()
 
-let matrixDefPath = InputDir + "/matrix.def"
-let matrixDefCompiler = ConnectionCostsCompiler(OutputStream(toFileAtPath: OutputDir + "/swift-compiled-matrix-def.data", append: false)!)
 
-matrixDefCompiler.readCosts(at: matrixDefPath)
-matrixDefCompiler.compile()
+printTimeElapsedWhenRunningCode(title: "") {
+    let matrixDefPath = InputDir + "/matrix.def"
+    let matrixDefCompiler = ConnectionCostsCompiler(OutputStream(toFileAtPath: OutputDir + "/swift-compiled-matrix-def.data", append: false)!)
+    
+    matrixDefCompiler.readCosts(at: matrixDefPath)
+    matrixDefCompiler.compile()
+}

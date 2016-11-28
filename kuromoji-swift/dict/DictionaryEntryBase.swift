@@ -11,11 +11,11 @@ import Foundation
 public class DictionaryEntryBase {
     
     internal let surface: String
-    internal let leftId: UInt16
-    internal let rightId: UInt16
-    internal let wordCost: UInt32
+    internal let leftId: Int16
+    internal let rightId: Int16
+    internal let wordCost: Int16
     
-    init(surface: String, leftId: UInt16, rightId: UInt16, wordCost: UInt32) {
+    init(surface: String, leftId: Int16, rightId: Int16, wordCost: Int16) {
         self.surface = surface
         self.leftId = leftId
         self.rightId = rightId

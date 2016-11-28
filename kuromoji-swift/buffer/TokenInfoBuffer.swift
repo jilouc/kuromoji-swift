@@ -42,12 +42,12 @@ public class TokenInfoBuffer {
     
         // Get left id, right id and word cost
         for i in 0..<tokenInfoCount {
-            entry.tokenInfos.append(buffer.getUInt16(at: position + i * TokenInfoBuffer.SHORT_BYTES));
+            entry.tokenInfos.append(buffer.getInt16(at: position + i * TokenInfoBuffer.SHORT_BYTES));
         }
     
         // Get part of speech tags values (not strings yet)
         for i in 0..<posInfoCount {
-            entry.posInfos.append(buffer.buffer[position + tokenInfoCount * TokenInfoBuffer.SHORT_BYTES + i]);
+            entry.posInfos.append(Int8(bitPattern: buffer.buffer[position + tokenInfoCount * TokenInfoBuffer.SHORT_BYTES + i]));
         }
     
         // Get field value references (string references)
@@ -58,17 +58,17 @@ public class TokenInfoBuffer {
         return entry;
     }
     
-    public func lookupTokenInfo(_ offset: Int, _ i: Int) -> UInt16 {
+    public func lookupTokenInfo(_ offset: Int, _ i: Int) -> Int {
         let position = getPosition(offset, entrySize);
-        return buffer.getUInt16(at: position + i * TokenInfoBuffer.SHORT_BYTES);
+        return Int(buffer.getInt16(at: position + i * TokenInfoBuffer.SHORT_BYTES));
     }
     
-    public func lookupPartOfSpeechFeature(_ offset: Int, _ i: Int) -> UInt8 {
+    public func lookupPartOfSpeechFeature(_ offset: Int, _ i: Int) -> Int {
         let position = getPosition(offset, entrySize);
-        return buffer.buffer[position + tokenInfoCount * TokenInfoBuffer.SHORT_BYTES + i];
+        return (0xFF & buffer.getInt(at: position + tokenInfoCount * TokenInfoBuffer.SHORT_BYTES + i));
     }
     
-    public func lookupFeature(_ offset: Int, _ i: Int) -> UInt32 {
+    public func lookupFeature(_ offset: Int, _ i: Int) -> Int {
         let position = getPosition(offset, entrySize);
         return buffer.getInt(at: position + tokenInfoCount * TokenInfoBuffer.SHORT_BYTES + posInfoCount + (i - posInfoCount) * TokenInfoBuffer.INTEGER_BYTES);
     }

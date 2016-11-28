@@ -21,9 +21,9 @@ class GenericDictionaryEntry: DictionaryEntryBase {
     
     public struct Builder {
         internal var surface: String = ""
-        internal var leftId: UInt16 = 0
-        internal var rightId: UInt16 = 0
-        internal var wordCost: UInt32 = 0
+        internal var leftId: Int16 = 0
+        internal var rightId: Int16 = 0
+        internal var wordCost: Int16 = 0
         internal var partOfSpeechFeatures: [String] = []
         internal var otherFeatures: [String] = []
         
@@ -34,9 +34,9 @@ class GenericDictionaryEntry: DictionaryEntryBase {
     
     public static func fromCSV(_ record: [String]) -> GenericDictionaryEntry {
         let surface = record[0]
-        let leftId = UInt16(record[1])!
-        let rightId = UInt16(record[2])!
-        let wordCost = UInt32(record[3])!
+        let leftId = Int16(record[1])!
+        let rightId = Int16(record[2])!
+        let wordCost = Int16(record[3])!
         let pos = [String](record[4..<10])
         let features = [String](record[10..<record.count])
         

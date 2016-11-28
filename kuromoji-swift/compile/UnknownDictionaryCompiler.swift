@@ -21,11 +21,15 @@ class UnknownDictionaryCompiler: Compiler {
     
     public func readUnknownDefinitions(at filePath: String, encoding: String.Encoding) {
         
-        guard let reader = BufferedReader(filePath, encoding: encoding) else {
+        guard let reader = BufferedStringReader(filePath, encoding: encoding) else {
             return
         }
-        let entries = reader.flatMap { line in
-            return GenericDictionaryEntry.fromCSV(CSVParser(line).parse().first!)
+        let entries = reader.flatMap { (line) -> GenericDictionaryEntry? in
+            do {
+                return GenericDictionaryEntry.fromCSV(try CSVParser(line).parse().first!)
+            } catch {
+                return nil
+            }
         }
         dictionaryEntries.append(contentsOf: entries)
     }

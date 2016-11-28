@@ -24,7 +24,7 @@ public class CharacterDefinitionsCompiler: Compiler {
     
     public func readCharacterDefinition(at filePath: String, encoding: String.Encoding) {
 
-        guard let reader = BufferedReader(filePath, encoding: encoding) else {
+        guard let reader = BufferedStringReader(filePath, encoding: encoding) else {
             return
         }
         

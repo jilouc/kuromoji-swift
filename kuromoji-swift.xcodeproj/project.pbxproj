@@ -7,6 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B2BDFA41DEA237C0098CD4B /* WordIdMapCompiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2BDFA31DEA237C0098CD4B /* WordIdMapCompiler.swift */; };
+		5B2BDFA61DEA40C70098CD4B /* TokenInfoDictionaryCompilerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2BDFA51DEA40C70098CD4B /* TokenInfoDictionaryCompilerBase.swift */; };
+		5B2BDFA81DEA41530098CD4B /* TokenInfoDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2BDFA71DEA41530098CD4B /* TokenInfoDictionary.swift */; };
+		5B2BDFAA1DEA436D0098CD4B /* DictionaryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2BDFA91DEA436D0098CD4B /* DictionaryType.swift */; };
+		5B2BDFAC1DEA4BC50098CD4B /* ResourceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2BDFAB1DEA4BC50098CD4B /* ResourceResolver.swift */; };
+		5B2BDFAE1DEA4BF00098CD4B /* SimpleResourceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2BDFAD1DEA4BF00098CD4B /* SimpleResourceResolver.swift */; };
+		5B2BDFC71DEB67E60098CD4B /* BufferEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9371DE219E400BB1909 /* BufferEntry.swift */; };
+		5B2BDFC81DEB67E60098CD4B /* FeatureInfoMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9381DE219E400BB1909 /* FeatureInfoMap.swift */; };
+		5B2BDFC91DEB67E60098CD4B /* StringValueMapBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9391DE219E400BB1909 /* StringValueMapBuffer.swift */; };
+		5B2BDFCA1DEB67E60098CD4B /* TokenInfoBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F93A1DE219E400BB1909 /* TokenInfoBuffer.swift */; };
+		5B2BDFCB1DEB67E60098CD4B /* WordIdMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F93B1DE219E400BB1909 /* WordIdMap.swift */; };
+		5B2BDFCC1DEB67E60098CD4B /* CharacterDefinitionsCompiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F93D1DE219E400BB1909 /* CharacterDefinitionsCompiler.swift */; };
+		5B2BDFCD1DEB67E60098CD4B /* Compiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F93E1DE219E400BB1909 /* Compiler.swift */; };
+		5B2BDFCE1DEB67E60098CD4B /* UnknownDictionaryCompiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F93F1DE219E400BB1909 /* UnknownDictionaryCompiler.swift */; };
+		5B2BDFCF1DEB67E60098CD4B /* ConnectionCostsCompiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F95F1DE2596A00BB1909 /* ConnectionCostsCompiler.swift */; };
+		5B2BDFD01DEB67E60098CD4B /* WordIdMapCompiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2BDFA31DEA237C0098CD4B /* WordIdMapCompiler.swift */; };
+		5B2BDFD11DEB67E60098CD4B /* TokenInfoDictionaryCompilerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2BDFA51DEA40C70098CD4B /* TokenInfoDictionaryCompilerBase.swift */; };
+		5B2BDFD21DEB67E60098CD4B /* DictionaryEntryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9411DE219E400BB1909 /* DictionaryEntryBase.swift */; };
+		5B2BDFD31DEB67E60098CD4B /* GenericDictionaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9421DE219E400BB1909 /* GenericDictionaryEntry.swift */; };
+		5B2BDFD41DEB67E60098CD4B /* TokenInfoDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2BDFA71DEA41530098CD4B /* TokenInfoDictionary.swift */; };
+		5B2BDFD51DEB67E60098CD4B /* DictionaryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2BDFA91DEA436D0098CD4B /* DictionaryType.swift */; };
+		5B2BDFD61DEB67E60098CD4B /* BufferedReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9441DE219E400BB1909 /* BufferedReader.swift */; };
+		5B2BDFD71DEB67E60098CD4B /* DataOutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9451DE219E400BB1909 /* DataOutputStream.swift */; };
+		5B2BDFD81DEB67E60098CD4B /* IntegerArrayIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9461DE219E400BB1909 /* IntegerArrayIO.swift */; };
+		5B2BDFD91DEB67E60098CD4B /* StringArrayIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9471DE219E400BB1909 /* StringArrayIO.swift */; };
+		5B2BDFDA1DEB67E60098CD4B /* ByteBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9491DE219E400BB1909 /* ByteBuffer.swift */; };
+		5B2BDFDB1DEB67E60098CD4B /* ShortBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9611DE25CF800BB1909 /* ShortBuffer.swift */; };
+		5B2BDFDC1DEB67E60098CD4B /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F94A1DE219E400BB1909 /* CSVParser.swift */; };
+		5B2BDFDD1DEB67E60098CD4B /* ScriptUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F94B1DE219E400BB1909 /* ScriptUtils.swift */; };
+		5B2BDFDE1DEB67E60098CD4B /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F94C1DE219E400BB1909 /* StringUtils.swift */; };
+		5B2BDFDF1DEB67E60098CD4B /* ResourceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2BDFAB1DEA4BC50098CD4B /* ResourceResolver.swift */; };
+		5B2BDFE01DEB67E60098CD4B /* SimpleResourceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2BDFAD1DEA4BF00098CD4B /* SimpleResourceResolver.swift */; };
+		5B2BDFE21DEB68130098CD4B /* StringValueMapBufferTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2BDFE11DEB68130098CD4B /* StringValueMapBufferTests.swift */; };
 		5B424C0C1DDA6D17003C5DEF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B424C0B1DDA6D17003C5DEF /* main.swift */; };
 		5B54F94D1DE219E400BB1909 /* BufferEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9371DE219E400BB1909 /* BufferEntry.swift */; };
 		5B54F94E1DE219E400BB1909 /* FeatureInfoMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9381DE219E400BB1909 /* FeatureInfoMap.swift */; };
@@ -28,6 +61,11 @@
 		5B54F95E1DE219E400BB1909 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F94C1DE219E400BB1909 /* StringUtils.swift */; };
 		5B54F9601DE2596A00BB1909 /* ConnectionCostsCompiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F95F1DE2596A00BB1909 /* ConnectionCostsCompiler.swift */; };
 		5B54F9621DE25CF800BB1909 /* ShortBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54F9611DE25CF800BB1909 /* ShortBuffer.swift */; };
+		5B5B58141DEB6A5B00F05C1D /* CSVParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B58131DEB6A5B00F05C1D /* CSVParserTests.swift */; };
+		5B5B58181DEB907100F05C1D /* CharacterDefinitionsCompilerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B58171DEB907100F05C1D /* CharacterDefinitionsCompilerTests.swift */; };
+		5B5B581A1DEB933100F05C1D /* CharacterDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B58191DEB933100F05C1D /* CharacterDefinitions.swift */; };
+		5BFF15AF1DEBAB08003CAC92 /* CharacterDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B58191DEB933100F05C1D /* CharacterDefinitions.swift */; };
+		5BFF15B31DEBB530003CAC92 /* char.def in Resources */ = {isa = PBXBuildFile; fileRef = 5BFF15B21DEBB530003CAC92 /* char.def */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +81,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B2BDFA31DEA237C0098CD4B /* WordIdMapCompiler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordIdMapCompiler.swift; sourceTree = "<group>"; };
+		5B2BDFA51DEA40C70098CD4B /* TokenInfoDictionaryCompilerBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenInfoDictionaryCompilerBase.swift; sourceTree = "<group>"; };
+		5B2BDFA71DEA41530098CD4B /* TokenInfoDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenInfoDictionary.swift; sourceTree = "<group>"; };
+		5B2BDFA91DEA436D0098CD4B /* DictionaryType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryType.swift; sourceTree = "<group>"; };
+		5B2BDFAB1DEA4BC50098CD4B /* ResourceResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceResolver.swift; sourceTree = "<group>"; };
+		5B2BDFAD1DEA4BF00098CD4B /* SimpleResourceResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleResourceResolver.swift; sourceTree = "<group>"; };
+		5B2BDFBF1DEB67320098CD4B /* kuromoji-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kuromoji-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B2BDFC31DEB67320098CD4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B2BDFE11DEB68130098CD4B /* StringValueMapBufferTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringValueMapBufferTests.swift; sourceTree = "<group>"; };
 		5B424C081DDA6D17003C5DEF /* kuromoji-swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "kuromoji-swift"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B424C0B1DDA6D17003C5DEF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5B54F9371DE219E400BB1909 /* BufferEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferEntry.swift; sourceTree = "<group>"; };
@@ -65,9 +112,20 @@
 		5B54F94C1DE219E400BB1909 /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		5B54F95F1DE2596A00BB1909 /* ConnectionCostsCompiler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCostsCompiler.swift; sourceTree = "<group>"; };
 		5B54F9611DE25CF800BB1909 /* ShortBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortBuffer.swift; sourceTree = "<group>"; };
+		5B5B58131DEB6A5B00F05C1D /* CSVParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVParserTests.swift; sourceTree = "<group>"; };
+		5B5B58171DEB907100F05C1D /* CharacterDefinitionsCompilerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDefinitionsCompilerTests.swift; sourceTree = "<group>"; };
+		5B5B58191DEB933100F05C1D /* CharacterDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDefinitions.swift; sourceTree = "<group>"; };
+		5BFF15B21DEBB530003CAC92 /* char.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = char.def; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5B2BDFBC1DEB67320098CD4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5B424C051DDA6D17003C5DEF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,10 +136,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B2BDFC01DEB67320098CD4B /* kuromoji-tests */ = {
+			isa = PBXGroup;
+			children = (
+				5B2BDFE11DEB68130098CD4B /* StringValueMapBufferTests.swift */,
+				5B5B58131DEB6A5B00F05C1D /* CSVParserTests.swift */,
+				5B5B58171DEB907100F05C1D /* CharacterDefinitionsCompilerTests.swift */,
+				5BFF15B11DEBB530003CAC92 /* Resources */,
+				5B2BDFC31DEB67320098CD4B /* Info.plist */,
+			);
+			path = "kuromoji-tests";
+			sourceTree = "<group>";
+		};
 		5B424BFF1DDA6D17003C5DEF = {
 			isa = PBXGroup;
 			children = (
 				5B424C0A1DDA6D17003C5DEF /* kuromoji-swift */,
+				5B2BDFC01DEB67320098CD4B /* kuromoji-tests */,
 				5B424C091DDA6D17003C5DEF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				5B424C081DDA6D17003C5DEF /* kuromoji-swift */,
+				5B2BDFBF1DEB67320098CD4B /* kuromoji-tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,6 +198,8 @@
 				5B54F93E1DE219E400BB1909 /* Compiler.swift */,
 				5B54F93F1DE219E400BB1909 /* UnknownDictionaryCompiler.swift */,
 				5B54F95F1DE2596A00BB1909 /* ConnectionCostsCompiler.swift */,
+				5B2BDFA31DEA237C0098CD4B /* WordIdMapCompiler.swift */,
+				5B2BDFA51DEA40C70098CD4B /* TokenInfoDictionaryCompilerBase.swift */,
 			);
 			path = compile;
 			sourceTree = "<group>";
@@ -135,6 +209,9 @@
 			children = (
 				5B54F9411DE219E400BB1909 /* DictionaryEntryBase.swift */,
 				5B54F9421DE219E400BB1909 /* GenericDictionaryEntry.swift */,
+				5B2BDFA71DEA41530098CD4B /* TokenInfoDictionary.swift */,
+				5B2BDFA91DEA436D0098CD4B /* DictionaryType.swift */,
+				5B5B58191DEB933100F05C1D /* CharacterDefinitions.swift */,
 			);
 			path = dict;
 			sourceTree = "<group>";
@@ -158,13 +235,40 @@
 				5B54F94A1DE219E400BB1909 /* CSVParser.swift */,
 				5B54F94B1DE219E400BB1909 /* ScriptUtils.swift */,
 				5B54F94C1DE219E400BB1909 /* StringUtils.swift */,
+				5B2BDFAB1DEA4BC50098CD4B /* ResourceResolver.swift */,
+				5B2BDFAD1DEA4BF00098CD4B /* SimpleResourceResolver.swift */,
 			);
 			path = util;
+			sourceTree = "<group>";
+		};
+		5BFF15B11DEBB530003CAC92 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5BFF15B21DEBB530003CAC92 /* char.def */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5B2BDFBE1DEB67320098CD4B /* kuromoji-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B2BDFC41DEB67320098CD4B /* Build configuration list for PBXNativeTarget "kuromoji-tests" */;
+			buildPhases = (
+				5B2BDFBB1DEB67320098CD4B /* Sources */,
+				5B2BDFBC1DEB67320098CD4B /* Frameworks */,
+				5B2BDFBD1DEB67320098CD4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "kuromoji-tests";
+			productName = "kuromoji-tests";
+			productReference = 5B2BDFBF1DEB67320098CD4B /* kuromoji-tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5B424C071DDA6D17003C5DEF /* kuromoji-swift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B424C0F1DDA6D17003C5DEF /* Build configuration list for PBXNativeTarget "kuromoji-swift" */;
@@ -192,6 +296,10 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Cocoapps;
 				TargetAttributes = {
+					5B2BDFBE1DEB67320098CD4B = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
 					5B424C071DDA6D17003C5DEF = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
@@ -211,11 +319,60 @@
 			projectRoot = "";
 			targets = (
 				5B424C071DDA6D17003C5DEF /* kuromoji-swift */,
+				5B2BDFBE1DEB67320098CD4B /* kuromoji-tests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		5B2BDFBD1DEB67320098CD4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BFF15B31DEBB530003CAC92 /* char.def in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		5B2BDFBB1DEB67320098CD4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B2BDFC81DEB67E60098CD4B /* FeatureInfoMap.swift in Sources */,
+				5B2BDFE21DEB68130098CD4B /* StringValueMapBufferTests.swift in Sources */,
+				5B2BDFD11DEB67E60098CD4B /* TokenInfoDictionaryCompilerBase.swift in Sources */,
+				5B2BDFCB1DEB67E60098CD4B /* WordIdMap.swift in Sources */,
+				5B2BDFCC1DEB67E60098CD4B /* CharacterDefinitionsCompiler.swift in Sources */,
+				5B2BDFD91DEB67E60098CD4B /* StringArrayIO.swift in Sources */,
+				5B5B58141DEB6A5B00F05C1D /* CSVParserTests.swift in Sources */,
+				5B2BDFD41DEB67E60098CD4B /* TokenInfoDictionary.swift in Sources */,
+				5B2BDFDE1DEB67E60098CD4B /* StringUtils.swift in Sources */,
+				5B2BDFD81DEB67E60098CD4B /* IntegerArrayIO.swift in Sources */,
+				5B2BDFD21DEB67E60098CD4B /* DictionaryEntryBase.swift in Sources */,
+				5B2BDFC91DEB67E60098CD4B /* StringValueMapBuffer.swift in Sources */,
+				5BFF15AF1DEBAB08003CAC92 /* CharacterDefinitions.swift in Sources */,
+				5B2BDFD51DEB67E60098CD4B /* DictionaryType.swift in Sources */,
+				5B2BDFDF1DEB67E60098CD4B /* ResourceResolver.swift in Sources */,
+				5B2BDFCD1DEB67E60098CD4B /* Compiler.swift in Sources */,
+				5B2BDFC71DEB67E60098CD4B /* BufferEntry.swift in Sources */,
+				5B2BDFCE1DEB67E60098CD4B /* UnknownDictionaryCompiler.swift in Sources */,
+				5B2BDFCA1DEB67E60098CD4B /* TokenInfoBuffer.swift in Sources */,
+				5B2BDFD61DEB67E60098CD4B /* BufferedReader.swift in Sources */,
+				5B2BDFD31DEB67E60098CD4B /* GenericDictionaryEntry.swift in Sources */,
+				5B2BDFE01DEB67E60098CD4B /* SimpleResourceResolver.swift in Sources */,
+				5B2BDFDA1DEB67E60098CD4B /* ByteBuffer.swift in Sources */,
+				5B2BDFD71DEB67E60098CD4B /* DataOutputStream.swift in Sources */,
+				5B5B58181DEB907100F05C1D /* CharacterDefinitionsCompilerTests.swift in Sources */,
+				5B2BDFDD1DEB67E60098CD4B /* ScriptUtils.swift in Sources */,
+				5B2BDFDB1DEB67E60098CD4B /* ShortBuffer.swift in Sources */,
+				5B2BDFD01DEB67E60098CD4B /* WordIdMapCompiler.swift in Sources */,
+				5B2BDFDC1DEB67E60098CD4B /* CSVParser.swift in Sources */,
+				5B2BDFCF1DEB67E60098CD4B /* ConnectionCostsCompiler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5B424C041DDA6D17003C5DEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -224,22 +381,29 @@
 				5B54F94E1DE219E400BB1909 /* FeatureInfoMap.swift in Sources */,
 				5B54F9511DE219E400BB1909 /* WordIdMap.swift in Sources */,
 				5B54F9621DE25CF800BB1909 /* ShortBuffer.swift in Sources */,
+				5B2BDFA61DEA40C70098CD4B /* TokenInfoDictionaryCompilerBase.swift in Sources */,
 				5B54F9521DE219E400BB1909 /* CharacterDefinitionsCompiler.swift in Sources */,
+				5B5B581A1DEB933100F05C1D /* CharacterDefinitions.swift in Sources */,
 				5B54F94F1DE219E400BB1909 /* StringValueMapBuffer.swift in Sources */,
+				5B2BDFA81DEA41530098CD4B /* TokenInfoDictionary.swift in Sources */,
+				5B2BDFAA1DEA436D0098CD4B /* DictionaryType.swift in Sources */,
 				5B54F9561DE219E400BB1909 /* GenericDictionaryEntry.swift in Sources */,
 				5B54F9531DE219E400BB1909 /* Compiler.swift in Sources */,
+				5B2BDFAC1DEA4BC50098CD4B /* ResourceResolver.swift in Sources */,
 				5B54F9591DE219E400BB1909 /* IntegerArrayIO.swift in Sources */,
 				5B54F95E1DE219E400BB1909 /* StringUtils.swift in Sources */,
 				5B54F9551DE219E400BB1909 /* DictionaryEntryBase.swift in Sources */,
 				5B54F94D1DE219E400BB1909 /* BufferEntry.swift in Sources */,
 				5B54F95B1DE219E400BB1909 /* ByteBuffer.swift in Sources */,
 				5B54F95C1DE219E400BB1909 /* CSVParser.swift in Sources */,
+				5B2BDFAE1DEA4BF00098CD4B /* SimpleResourceResolver.swift in Sources */,
 				5B54F95A1DE219E400BB1909 /* StringArrayIO.swift in Sources */,
 				5B54F9541DE219E400BB1909 /* UnknownDictionaryCompiler.swift in Sources */,
 				5B54F9571DE219E400BB1909 /* BufferedReader.swift in Sources */,
 				5B54F9501DE219E400BB1909 /* TokenInfoBuffer.swift in Sources */,
 				5B424C0C1DDA6D17003C5DEF /* main.swift in Sources */,
 				5B54F9581DE219E400BB1909 /* DataOutputStream.swift in Sources */,
+				5B2BDFA41DEA237C0098CD4B /* WordIdMapCompiler.swift in Sources */,
 				5B54F9601DE2596A00BB1909 /* ConnectionCostsCompiler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +411,32 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		5B2BDFC51DEB67320098CD4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "kuromoji-tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.cocoapps.kuromoji-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5B2BDFC61DEB67320098CD4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "kuromoji-tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.cocoapps.kuromoji-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		5B424C0D1DDA6D17003C5DEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -338,6 +528,7 @@
 		5B424C101DDA6D17003C5DEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_OPTIMIZATION_LEVEL = fast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -354,6 +545,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5B2BDFC41DEB67320098CD4B /* Build configuration list for PBXNativeTarget "kuromoji-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B2BDFC51DEB67320098CD4B /* Debug */,
+				5B2BDFC61DEB67320098CD4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5B424C031DDA6D17003C5DEF /* Build configuration list for PBXProject "kuromoji-swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

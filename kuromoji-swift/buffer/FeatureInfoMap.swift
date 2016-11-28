@@ -10,11 +10,11 @@ import Foundation
 
 public struct FeatureInfoMap : CustomStringConvertible {
     
-    var featureMap = [String: UInt32]()
-    private var maxValue: UInt32 = 0
+    var featureMap = [String: Int]()
+    private var maxValue: Int = 0
     
-    mutating public func mapFeatures(_ features: [String]) -> [UInt32] {
-        var posFeatureIds = [UInt32]()
+    mutating public func mapFeatures(_ features: [String]) -> [Int] {
+        var posFeatureIds = [Int]()
         for feature in features {
             if let posFeatureId = featureMap[feature] {
                 posFeatureIds.append(posFeatureId)
@@ -27,15 +27,15 @@ public struct FeatureInfoMap : CustomStringConvertible {
         return posFeatureIds
     }
     
-    public func invert() -> [UInt32: String] {
-        var features = [UInt32: String]()
+    public func invert() -> [Int: String] {
+        var features = [Int: String]()
         for (key, value) in featureMap {
             features[value] = key
         }
         return features
     }
     
-    public func getEntryCount() -> UInt32 {
+    public func getEntryCount() -> Int {
         return maxValue
     }
     

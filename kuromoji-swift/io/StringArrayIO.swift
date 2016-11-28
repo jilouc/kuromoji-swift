@@ -23,4 +23,13 @@ struct StringArrayIO {
             writeArray(outputStream, array: inner)
         }
     }
+    
+    public static func readArray(_ inputStream: InputStream) -> [String] {
+        let length = inputStream.readInt()
+        var strings = [String]()
+        for _ in 0..<length {
+            strings.append(inputStream.readString())
+        }
+        return strings
+    }
 }

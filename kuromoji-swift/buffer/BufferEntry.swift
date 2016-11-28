@@ -10,11 +10,11 @@ import Foundation
 
 public struct BufferEntry {
     
-    var tokenInfo = [UInt16]()
-    var features = [UInt32]()
-    var posInfo = [UInt8]()
-    var tokenInfos = [UInt16]()
-    var featureInfos = [UInt32]()
-    var posInfos = [UInt8]()
+    var tokenInfo = [Int16]()
+    var features = [Int]()
+    var posInfo = [Int8]()
+    var tokenInfos = [Int16]()
+    var featureInfos = [Int]()
+    var posInfos = [Int8]()
     
 }

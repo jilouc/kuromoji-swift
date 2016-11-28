@@ -59,15 +59,15 @@ class ByteBuffer {
         pos = index + bytes.count
     }
     
-    func getInt(at index: Int) -> UInt32 {
+    func getInt(at index: Int) -> Int {
         if size < 4 || index >= size - 4 {
             return 0
         }
-        let b1 = ((UInt32(buffer[index])     << 24) & 0xFF000000)
-        let b2 = ((UInt32(buffer[index + 1]) << 16) & 0x00FF0000)
-        let b3 = ((UInt32(buffer[index + 2]) << 8)  & 0x0000FF00)
-        let b4 = ((UInt32(buffer[index + 3]) << 0)  & 0x000000FF)
-        return (b1 | b2 | b3 | b4)
+        let b1 = ((Int(buffer[index])     << 24) & 0xFF000000)
+        let b2 = ((Int(buffer[index + 1]) << 16) & 0x00FF0000)
+        let b3 = ((Int(buffer[index + 2]) << 8)  & 0x0000FF00)
+        let b4 = ((Int(buffer[index + 3]) << 0)  & 0x000000FF)
+        return b1 | b2 | b3 | b4
     }
     
     func getUInt16(at index: Int) -> UInt16 {
@@ -76,6 +76,16 @@ class ByteBuffer {
         }
         let b1 = ((UInt16(buffer[index])     << 8) & 0xFF00)
         let b2 = ((UInt16(buffer[index + 1]) << 0) & 0x00FF)
+        return (b1 | b2)
+    }
+    
+    
+    func getInt16(at index: Int) -> Int16 {
+        if size < 2 || index >= size - 2 {
+            return 0
+        }
+        let b1 = (Int16(buffer[index]) << 8) & Int16(bitPattern: 0xFF00)
+        let b2 = (Int16(buffer[index + 1]) << 0) & Int16(0x00FF)
         return (b1 | b2)
     }
     

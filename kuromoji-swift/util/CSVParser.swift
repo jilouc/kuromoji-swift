@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum CSVParserError : Error {
+    case unmatchedDoubleQuote
+}
+
 public class CSVParser {
     
     private static let QUOTE = "\""
@@ -20,7 +24,7 @@ public class CSVParser {
     private let endTextCharacterSet: CharacterSet
     private let separatorIsSingleChar: Bool
     
-    init(_ string: String, separator: String = CSVParser.COMMA) {
+    public required init(_ string: String, separator: String = CSVParser.COMMA) {
         self.string = string
         self.separator = separator
         self.separatorIsSingleChar = separator.characters.count == 1
@@ -34,28 +38,50 @@ public class CSVParser {
         endTextCharacterSet = endTextCharSet
     }
     
-    public func parse() -> [[String]] {
-        return parseFile()
+    public static func parseRecord(_ record: String) -> [String]? {
+        let parser = self.init(record)
+        do {
+            let records = try parser.parse()
+            if records.count == 0 {
+                return nil
+            }
+            return records.first!
+        } catch {
+            return nil
+        }
     }
     
-    private func parseFile() -> [[String]] {
+    public static func parseField(_ field: String) -> String? {
+        if let fields = parseRecord(field) {
+            if fields.count != 0 {
+                return fields.first!
+            }
+        }
+        return nil
+    }
+    
+    public func parse() throws -> [[String]] {
+        return try parseFile()
+    }
+    
+    private func parseFile() throws -> [[String]] {
         var records = [[String]]()
-        var record = parseRecord()
+        var record = try parseRecord()
         while record != nil {
             records.append(record!)
             if parseLineSeparator() == nil {
                 break
             }
-            record = parseRecord()
+            record = try parseRecord()
         }
         return records
     }
     
-    private func parseRecord() -> [String]? {
+    private func parseRecord() throws -> [String]? {
         if parseLineSeparator() != nil || scanner.isAtEnd {
             return nil
         }
-        var field = parseField()
+        var field = try parseField()
         var record = [String]()
         
         while field != nil {
@@ -63,13 +89,13 @@ public class CSVParser {
             if parseSeparator() == nil {
                 break
             }
-            field = parseField()
+            field = try parseField()
         }
         return record
     }
     
-    private func parseField() -> String? {
-        if let escapedString = parseEscaped() {
+    private func parseField() throws -> String? {
+        if let escapedString = try parseEscaped() {
             return escapedString
         }
         if let nonEscapedString = parseNonEscaped() {
@@ -83,7 +109,7 @@ public class CSVParser {
         return nil
     }
     
-    private func parseEscaped() -> String? {
+    private func parseEscaped() throws -> String?  {
         if parseDoubleQuote() == nil {
             return nil
         }
@@ -108,7 +134,7 @@ public class CSVParser {
             }
         }
         if parseDoubleQuote() == nil {
-            return nil
+            throw CSVParserError.unmatchedDoubleQuote
         }
         return accumulatedString
     }
@@ -161,6 +187,17 @@ public class CSVParser {
                 accumulatedText.append(firstCharOfSeparator as! String)
             }
         }
-        return accumulatedText
+        if accumulatedText.characters.count != 0 {
+            return accumulatedText
+        }
+        return nil
+    }
+    
+    public static func escape(_ string: String, separator: String = CSVParser.COMMA) -> String {
+        let escapedString = string.replace(CSVParser.QUOTE, with: CSVParser.QUOTE_ESCAPED)
+        if let _ = string.range(of: separator) {
+            return String(format: "%@%@%@", CSVParser.QUOTE, escapedString, CSVParser.QUOTE)
+        }
+        return escapedString
     }
 }

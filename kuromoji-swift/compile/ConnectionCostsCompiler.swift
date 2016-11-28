@@ -22,7 +22,7 @@ class ConnectionCostsCompiler : Compiler {
  
     public func readCosts(at filePath: String) {
         
-        guard let reader = BufferedReader(filePath, chunkSize: 256, encoding: String.Encoding.utf8) else {
+        guard let reader = BufferedStringReader(filePath, encoding: .utf8, chunkSize: 256) else {
             return
         }
         guard let firstLine = reader.nextLine() else {
@@ -44,12 +44,11 @@ class ConnectionCostsCompiler : Compiler {
         
         for line in reader {
             autoreleasepool {
-                let fields = line.components(separatedBy: " ")
+                let fields = line.unicodeScalars.split(separator: " ")
                 assert(fields.count == 3)
-                let forwardId = Int(fields[0])!
-                let backwardId = Int(fields[1])!
-                let cost = Int16(fields[2])!
-                
+                let forwardId = Int(String(fields[0]))!
+                let backwardId = Int(String(fields[1]))!
+                let cost = Int16(String(fields[2]))!
                 putCost(forwardId: forwardId, backwardId: backwardId, cost: cost)
             }
         }
@@ -63,8 +62,7 @@ class ConnectionCostsCompiler : Compiler {
     func compile() {
         outputStream.open()
         outputStream.writeInt(cardinality)
-        outputStream.writeInt(bufferSize * ConnectionCostsCompiler.SHORT_BYTES)
-        
+        outputStream.writeInt(bufferSize * ConnectionCostsCompiler.SHORT_BYTES)        
         let byteBuffer = ByteBuffer(size: costs.size * ConnectionCostsCompiler.SHORT_BYTES)
         for cost in costs.buffer {
             byteBuffer.put(cost)

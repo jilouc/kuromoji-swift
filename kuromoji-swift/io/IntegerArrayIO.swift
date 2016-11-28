@@ -10,6 +10,8 @@ import Foundation
 
 struct IntegerArrayIO {
     
+    static let INT_BYTES = MemoryLayout<Int>.size / MemoryLayout<UInt8>.size;
+
     public static func writeArray(_ outputStream: OutputStream, array: [Int]) {
         outputStream.writeInt(array.count)
         for i in array {
@@ -35,5 +37,44 @@ struct IntegerArrayIO {
         }
         outputStream.writeInt(-1)
     }
+    
+    public static func readSparseArray2D(_ inputStream: InputStream) -> [[Int]?] {
+        let arrayCount = inputStream.readInt()
+        var arrays = [[Int]?](repeating: nil, count: arrayCount)
+        
+        var index: Int
+        while inputStream.hasBytesAvailable {
+            index = inputStream.readInt()
+            if index < 0 {
+                break
+            }
+            arrays[index] = readArray(inputStream)
+        }
+        
+        return arrays
+    }
+    
+    public static func readArray(_ inputStream: InputStream) -> [Int] {
+        let count = inputStream.readInt()
+        var array = [Int]()
+        for _ in 0..<count {
+            array.append(inputStream.readInt())
+        }
+        return array
+    }
+    
+    /*public static int[][] readSparseArray2D(InputStream input) throws IOException {
+    ReadableByteChannel channel = Channels.newChannel(input);
+    
+    int arrayCount = readIntFromByteChannel(channel);
+    int[][] arrays = new int[arrayCount][];
+    
+    int index;
+    
+    while ((index = readIntFromByteChannel(channel)) >= 0) {
+    arrays[index] = readArrayFromChannel(channel);
+    }
+    return arrays;
+    }*/
 }
 

@@ -53,4 +53,13 @@ extension Scanner {
         }
         return nil
     }
+    
+    func scanUpToString(_ string: String) -> String? {
+        var value: NSString? = ""
+        if scanUpTo(string, into: &value),
+            let value = value as? String {
+            return value
+        }
+        return nil
+    }
 }

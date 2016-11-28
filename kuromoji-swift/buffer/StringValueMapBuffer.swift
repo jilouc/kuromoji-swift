@@ -73,7 +73,8 @@ class StringValueMapBuffer {
         var keyIndex = StringValueMapBuffer.INTEGER_BYTES; // First key index is past size
         var entryIndex = keyIndex + size * StringValueMapBuffer.INTEGER_BYTES;
     
-        for (_, string) in strings {
+        for key in strings.keys.sorted() {
+            let string = strings[key]!
             buffer.put(entryIndex, at: keyIndex)
             entryIndex = put(entryIndex, string)
             keyIndex += StringValueMapBuffer.INTEGER_BYTES
