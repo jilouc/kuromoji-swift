@@ -10,27 +10,22 @@ import XCTest
 
 class CharacterDefinitionsCompilerTests: XCTestCase {
 
-    var compiler: CharacterDefinitionsCompiler!
     var categoryIdMap: [Int: String]!
     var characterDefinition: CharacterDefinitions!
-    
-    lazy var charDefFileURL: URL = {
-        return URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("kuromoji-chardef.bin")
-    }()
     
     override func setUp() {
         super.setUp()
         
         let bundle = Bundle.init(for: type(of: self))
-        let ouputStream = OutputStream(url: charDefFileURL, append: false)!
+        let outputStream = OutputStream(toMemory: ())
         
-        compiler = CharacterDefinitionsCompiler(ouputStream)
+        let compiler = CharacterDefinitionsCompiler(outputStream)
         compiler.readCharacterDefinition(at: bundle.path(forResource: "char", ofType: "def")!, encoding: .japaneseEUC)
         
         categoryIdMap = _invert(compiler.makeCharacterCategoryMap())
         compiler.compile()
 
-        let charDefInput = InputStream(url: charDefFileURL)!
+        let charDefInput = InputStream(data: outputStream.property(forKey: .dataWrittenToMemoryStreamKey) as! Data)
         charDefInput.open()
         defer {
             charDefInput.close()
@@ -43,10 +38,8 @@ class CharacterDefinitionsCompilerTests: XCTestCase {
     }
     
     override func tearDown() {
-        compiler = nil
         categoryIdMap = nil
         characterDefinition = nil
-        try! FileManager.default.removeItem(at: charDefFileURL)
         super.tearDown()
     }
 
