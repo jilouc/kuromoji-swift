@@ -16,16 +16,11 @@ public class WordIdMap {
     
     private static let empty = [Int]();
     
-    init(_ inputStream: InputStream) {
-        indices = []
-        wordIds = []
+    init(inputStream: InputStream) {
+        let arrays = IntegerArrayIO.readArray2D(inputStream)
+        indices = arrays[0]
+        wordIds = arrays[2]
     }
-    
-//    public WordIdMap(InputStream input) throws IOException {
-//     int arrays[][] = IntegerArrayIO.readArrays(input, 2);
-//    indices = arrays[0];
-//    wordIds = arrays[1];
-//    }
     
     public func lookUp(_ sourceId: Int) -> [Int] {
         let index = indices[sourceId];

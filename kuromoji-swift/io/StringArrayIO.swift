@@ -32,4 +32,13 @@ struct StringArrayIO {
         }
         return strings
     }
+    
+    public static func readArray2D(_ inputStream: InputStream) -> [[String]] {
+        let arrayCount = inputStream.readInt()
+        var arrays = [[String]]()
+        for _ in 0..<arrayCount {
+            arrays.append(readArray(inputStream))
+        }
+        return arrays
+    }
 }

@@ -63,18 +63,13 @@ struct IntegerArrayIO {
         return array
     }
     
-    /*public static int[][] readSparseArray2D(InputStream input) throws IOException {
-    ReadableByteChannel channel = Channels.newChannel(input);
-    
-    int arrayCount = readIntFromByteChannel(channel);
-    int[][] arrays = new int[arrayCount][];
-    
-    int index;
-    
-    while ((index = readIntFromByteChannel(channel)) >= 0) {
-    arrays[index] = readArrayFromChannel(channel);
+    public static func readArray2D(_ inputStream: InputStream) -> [[Int]] {
+        let arrayCount = inputStream.readInt()
+        var arrays = [[Int]]()
+        for _ in 0..<arrayCount {
+            arrays.append(readArray(inputStream))
+        }
+        return arrays
     }
-    return arrays;
-    }*/
 }
 
