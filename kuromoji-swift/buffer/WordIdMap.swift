@@ -16,10 +16,9 @@ public class WordIdMap {
     
     private static let empty = [Int]();
     
-    init(inputStream: InputStream) {
-        let arrays = IntegerArrayIO.readArray2D(inputStream)
-        indices = arrays[0]
-        wordIds = arrays[2]
+    init(_ inputStream: InputStream) {
+        indices = IntegerArrayIO.readArray(inputStream)
+        wordIds = IntegerArrayIO.readArray(inputStream)
     }
     
     public func lookUp(_ sourceId: Int) -> [Int] {

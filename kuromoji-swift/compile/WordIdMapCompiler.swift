@@ -20,14 +20,16 @@ class WordIdMapCompiler: Compiler {
         }
         
         var current = wordIds[sourceId] ?? []
-        current.append(sourceId)
+        current.append(wordId)
         wordIds[sourceId] = current
     }
     
-    public func write(outputStream: OutputStream) {
+    public func write(_ outputStream: OutputStream) {
         compile()
+        outputStream.open()
         IntegerArrayIO.writeArray(outputStream, array: indices)
         IntegerArrayIO.writeArray(outputStream, array: wordIdArray)
+        outputStream.close()
     }
     
     func compile() {

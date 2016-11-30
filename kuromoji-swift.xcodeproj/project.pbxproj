@@ -70,6 +70,7 @@
 		5BFF15B71DECEC64003CAC92 /* UnknownDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF15B61DECEC64003CAC92 /* UnknownDictionary.swift */; };
 		5BFF15B91DECECAB003CAC92 /* unk.def in Resources */ = {isa = PBXBuildFile; fileRef = 5BFF15B81DECECAB003CAC92 /* unk.def */; };
 		5BFF15BA1DEE421E003CAC92 /* UnknownDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF15B61DECEC64003CAC92 /* UnknownDictionary.swift */; };
+		5BFF15BC1DEF6659003CAC92 /* WordIdMapCompilerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF15BB1DEF6659003CAC92 /* WordIdMapCompilerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -123,6 +124,7 @@
 		5BFF15B41DECE783003CAC92 /* UnknownDictionaryCompilerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnknownDictionaryCompilerTests.swift; sourceTree = "<group>"; };
 		5BFF15B61DECEC64003CAC92 /* UnknownDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnknownDictionary.swift; sourceTree = "<group>"; };
 		5BFF15B81DECECAB003CAC92 /* unk.def */ = {isa = PBXFileReference; fileEncoding = 3; lastKnownFileType = text; path = unk.def; sourceTree = "<group>"; };
+		5BFF15BB1DEF6659003CAC92 /* WordIdMapCompilerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordIdMapCompilerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				5B5B58131DEB6A5B00F05C1D /* CSVParserTests.swift */,
 				5B5B58171DEB907100F05C1D /* CharacterDefinitionsCompilerTests.swift */,
 				5BFF15B41DECE783003CAC92 /* UnknownDictionaryCompilerTests.swift */,
+				5BFF15BB1DEF6659003CAC92 /* WordIdMapCompilerTests.swift */,
 				5BFF15B11DEBB530003CAC92 /* Resources */,
 				5B2BDFC31DEB67320098CD4B /* Info.plist */,
 			);
@@ -376,6 +379,7 @@
 				5B2BDFE01DEB67E60098CD4B /* SimpleResourceResolver.swift in Sources */,
 				5B2BDFDA1DEB67E60098CD4B /* ByteBuffer.swift in Sources */,
 				5BFF15BA1DEE421E003CAC92 /* UnknownDictionary.swift in Sources */,
+				5BFF15BC1DEF6659003CAC92 /* WordIdMapCompilerTests.swift in Sources */,
 				5B2BDFD71DEB67E60098CD4B /* DataOutputStream.swift in Sources */,
 				5B5B58181DEB907100F05C1D /* CharacterDefinitionsCompilerTests.swift in Sources */,
 				5B2BDFDD1DEB67E60098CD4B /* ScriptUtils.swift in Sources */,
