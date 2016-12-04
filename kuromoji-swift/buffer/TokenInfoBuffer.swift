@@ -22,12 +22,17 @@ public class TokenInfoBuffer {
     private var entrySize: Int = 0;
 
     init(_ inputStream: InputStream) {
-        var readBuffer: UnsafeMutablePointer<UInt8>?
-        var readSize: Int = 0
-        inputStream.getBuffer(&readBuffer, length: &readSize)
-        if readBuffer != nil {
-            buffer = ByteBuffer(size: readSize)
-            buffer.put([UInt8](UnsafeBufferPointer(start: readBuffer, count: readSize)))
+        var data = Data()
+        while inputStream.hasBytesAvailable {
+            var bytes = [UInt8](repeating: 0, count: 4096)
+            let bytesRead = inputStream.read(&bytes, maxLength: 4096)
+            data.append(bytes, count: bytesRead)
+        }
+        if data.count != 0 {
+            buffer = ByteBuffer(size: data.count)
+            data.withUnsafeBytes {
+                buffer.put([UInt8](UnsafeBufferPointer(start: $0, count: data.count)))
+            }
         }
         tokenInfoCount = getTokenInfoCount()
         posInfoCount = getPosInfoCount()

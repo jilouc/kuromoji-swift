@@ -71,6 +71,9 @@
 		5BFF15B91DECECAB003CAC92 /* unk.def in Resources */ = {isa = PBXBuildFile; fileRef = 5BFF15B81DECECAB003CAC92 /* unk.def */; };
 		5BFF15BA1DEE421E003CAC92 /* UnknownDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF15B61DECEC64003CAC92 /* UnknownDictionary.swift */; };
 		5BFF15BC1DEF6659003CAC92 /* WordIdMapCompilerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF15BB1DEF6659003CAC92 /* WordIdMapCompilerTests.swift */; };
+		5BFF15BE1DEF8854003CAC92 /* TokenInfoBufferCompiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF15BD1DEF8854003CAC92 /* TokenInfoBufferCompiler.swift */; };
+		5BFF15C01DEF8C93003CAC92 /* TokenInfoBufferCompilerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF15BF1DEF8C93003CAC92 /* TokenInfoBufferCompilerTests.swift */; };
+		5BFF15C11DEF8C99003CAC92 /* TokenInfoBufferCompiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF15BD1DEF8854003CAC92 /* TokenInfoBufferCompiler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -125,6 +128,8 @@
 		5BFF15B61DECEC64003CAC92 /* UnknownDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnknownDictionary.swift; sourceTree = "<group>"; };
 		5BFF15B81DECECAB003CAC92 /* unk.def */ = {isa = PBXFileReference; fileEncoding = 3; lastKnownFileType = text; path = unk.def; sourceTree = "<group>"; };
 		5BFF15BB1DEF6659003CAC92 /* WordIdMapCompilerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordIdMapCompilerTests.swift; sourceTree = "<group>"; };
+		5BFF15BD1DEF8854003CAC92 /* TokenInfoBufferCompiler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenInfoBufferCompiler.swift; sourceTree = "<group>"; };
+		5BFF15BF1DEF8C93003CAC92 /* TokenInfoBufferCompilerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenInfoBufferCompilerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +158,7 @@
 				5B5B58171DEB907100F05C1D /* CharacterDefinitionsCompilerTests.swift */,
 				5BFF15B41DECE783003CAC92 /* UnknownDictionaryCompilerTests.swift */,
 				5BFF15BB1DEF6659003CAC92 /* WordIdMapCompilerTests.swift */,
+				5BFF15BF1DEF8C93003CAC92 /* TokenInfoBufferCompilerTests.swift */,
 				5BFF15B11DEBB530003CAC92 /* Resources */,
 				5B2BDFC31DEB67320098CD4B /* Info.plist */,
 			);
@@ -211,6 +217,7 @@
 				5B54F95F1DE2596A00BB1909 /* ConnectionCostsCompiler.swift */,
 				5B2BDFA31DEA237C0098CD4B /* WordIdMapCompiler.swift */,
 				5B2BDFA51DEA40C70098CD4B /* TokenInfoDictionaryCompilerBase.swift */,
+				5BFF15BD1DEF8854003CAC92 /* TokenInfoBufferCompiler.swift */,
 			);
 			path = compile;
 			sourceTree = "<group>";
@@ -356,8 +363,10 @@
 			files = (
 				5B2BDFC81DEB67E60098CD4B /* FeatureInfoMap.swift in Sources */,
 				5B2BDFE21DEB68130098CD4B /* StringValueMapBufferTests.swift in Sources */,
+				5BFF15C11DEF8C99003CAC92 /* TokenInfoBufferCompiler.swift in Sources */,
 				5B2BDFD11DEB67E60098CD4B /* TokenInfoDictionaryCompilerBase.swift in Sources */,
 				5B2BDFCB1DEB67E60098CD4B /* WordIdMap.swift in Sources */,
+				5BFF15C01DEF8C93003CAC92 /* TokenInfoBufferCompilerTests.swift in Sources */,
 				5B2BDFCC1DEB67E60098CD4B /* CharacterDefinitionsCompiler.swift in Sources */,
 				5B2BDFD91DEB67E60098CD4B /* StringArrayIO.swift in Sources */,
 				5B5B58141DEB6A5B00F05C1D /* CSVParserTests.swift in Sources */,
@@ -406,6 +415,7 @@
 				5BFF15B71DECEC64003CAC92 /* UnknownDictionary.swift in Sources */,
 				5B2BDFAA1DEA436D0098CD4B /* DictionaryType.swift in Sources */,
 				5B54F9561DE219E400BB1909 /* GenericDictionaryEntry.swift in Sources */,
+				5BFF15BE1DEF8854003CAC92 /* TokenInfoBufferCompiler.swift in Sources */,
 				5B54F9531DE219E400BB1909 /* Compiler.swift in Sources */,
 				5B2BDFAC1DEA4BC50098CD4B /* ResourceResolver.swift in Sources */,
 				5B54F9591DE219E400BB1909 /* IntegerArrayIO.swift in Sources */,
