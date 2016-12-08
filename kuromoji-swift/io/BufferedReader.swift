@@ -46,7 +46,7 @@ public class BufferedDataReader: Sequence {
         precondition(inputStream != nil, "Attempt to read from closed file")
         
         // Read data chunks from file until a line delimiter is found:
-        while inputStream.hasBytesAvailable && !endOfFile {
+        while !endOfFile {
             let line = autoreleasepool { () -> Data? in
                 if let range = buffer.range(of: lineDelimiter) {
                     // Convert complete line (excluding the delimiter) to a string:

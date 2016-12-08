@@ -14,17 +14,24 @@ class ConnectionCostsCompiler : Compiler {
     private var cardinality: Int = 0
     private var bufferSize: Int = 0
     private let outputStream: OutputStream
-    private var costs: ShortBuffer!
+    private var costs: [Int16]!
     
     init(_ outputStream: OutputStream) {
         self.outputStream = outputStream
     }
  
+    
     public func readCosts(at filePath: String) {
-        
-        guard let reader = BufferedStringReader(filePath, encoding: .utf8, chunkSize: 256) else {
+        guard let inputStream = InputStream(fileAtPath: filePath) else {
             return
         }
+        readCosts(inputStream)
+    }
+    
+    public func readCosts(_ inputStream: InputStream) {
+    
+        let reader = BufferedStringReader(inputStream, encoding: .utf8, chunkSize: 256)
+        
         guard let firstLine = reader.nextLine() else {
             return
         }
@@ -40,7 +47,7 @@ class ConnectionCostsCompiler : Compiler {
         
         cardinality = backwardSize
         bufferSize = forwardSize * backwardSize
-        costs = ShortBuffer(size: bufferSize)
+        costs = [Int16](repeating: 0, count: bufferSize)
         
         for line in reader {
             autoreleasepool {
@@ -56,18 +63,16 @@ class ConnectionCostsCompiler : Compiler {
     }
     
     func putCost(forwardId: Int, backwardId: Int, cost: Int16) {
-        costs.put(cost, at: backwardId + forwardId * cardinality)
+        costs[backwardId + forwardId * cardinality] = cost
     }
     
     func compile() {
         outputStream.open()
         outputStream.writeInt(cardinality)
-        outputStream.writeInt(bufferSize * ConnectionCostsCompiler.SHORT_BYTES)        
-        let byteBuffer = ByteBuffer(size: costs.size * ConnectionCostsCompiler.SHORT_BYTES)
-        for cost in costs.buffer {
-            byteBuffer.put(cost)
+        outputStream.writeInt(bufferSize)
+        for cost in costs {
+            outputStream.writeInt16(cost)
         }
-        outputStream.write([UInt8](byteBuffer.buffer), maxLength: byteBuffer.size)
         outputStream.close()
     }
 }

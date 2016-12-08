@@ -58,10 +58,21 @@ class ShortBuffer {
     }
     
     func put(_ shorts: [Int16], at index: Int) {
-        for i in index..<(index + shorts.count) {
+        for i in index..<(index + shorts.count - 1) {
             buffer[index] = shorts[i - index]
         }
         pos = index + shorts.count
+    }
+    
+    func getInt() -> Int {
+        let res = (Int(buffer[pos] << 16) & 0xFFFF000) | (Int(buffer[pos + 1]) & 0xFFFF)
+        pos += 2
+        return res
+    }
+    
+    func getInt(at index: Int) -> Int {
+        position(index)
+        return getInt()
     }
     
     /*func getInt(at index: Int) -> Int32 {

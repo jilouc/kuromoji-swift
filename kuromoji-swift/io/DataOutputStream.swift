@@ -14,8 +14,8 @@ extension OutputStream {
         write([UInt8((int & 0xFF000000) >> 24), UInt8((int & 0xFF0000) >> 16), UInt8((int & 0xFF00) >> 8), UInt8(int & 0xFF)], maxLength: 4)
     }
     
-    func writeInt16(_ int: UInt16) {
-        write([UInt8((int & 0xFF00) >> 8), UInt8(int & 0xFF)], maxLength: 2)
+    func writeInt16(_ int: Int16) {
+        write([UInt8((int & Int16(bitPattern: 0xFF00)) >> 8), UInt8(int & 0xFF)], maxLength: 2)
     }
     
     func writeInt(_ int: Int) {
@@ -24,7 +24,7 @@ extension OutputStream {
     
     func writeString(_ string: String) {
         let bytes = [UInt8](string.utf8)
-        writeInt16(UInt16(bitPattern:Int16(bytes.count)))
+        writeInt16(Int16(bytes.count))
         write(bytes, maxLength: bytes.count)
     }
 }
@@ -52,6 +52,19 @@ extension InputStream {
     
     func readInt() -> Int {
         return Int(readInt32())
+    }
+    
+    func readBytes() -> [UInt8] {
+        var data = Data()
+        let chunkSize = 4096
+        while hasBytesAvailable {
+            var bytes = [UInt8](repeating: 0, count: chunkSize)
+            let readBytes = read(&bytes, maxLength: chunkSize)
+            data.append(bytes, count: readBytes)
+        }
+        return data.withUnsafeBytes {
+            return [UInt8](UnsafeBufferPointer(start: $0, count: data.count))
+        } 
     }
     
     
