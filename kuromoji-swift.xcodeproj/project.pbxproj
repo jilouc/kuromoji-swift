@@ -64,6 +64,10 @@
 		5B5B58141DEB6A5B00F05C1D /* CSVParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B58131DEB6A5B00F05C1D /* CSVParserTests.swift */; };
 		5B5B58181DEB907100F05C1D /* CharacterDefinitionsCompilerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B58171DEB907100F05C1D /* CharacterDefinitionsCompilerTests.swift */; };
 		5B5B581A1DEB933100F05C1D /* CharacterDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B58191DEB933100F05C1D /* CharacterDefinitions.swift */; };
+		5B83B3971DFA0C160059F822 /* DictionaryField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B3961DFA0C160059F822 /* DictionaryField.swift */; };
+		5B83B3991DFA0C660059F822 /* InsertedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B3981DFA0C660059F822 /* InsertedDictionary.swift */; };
+		5B83B39B1DFA0E230059F822 /* InsertedDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B39A1DFA0E230059F822 /* InsertedDictionaryTests.swift */; };
+		5B83B39C1DFA0E250059F822 /* InsertedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B3981DFA0C660059F822 /* InsertedDictionary.swift */; };
 		5BF905FB1DF4670B003A1BB1 /* ConnectionCostsCompilerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF905FA1DF4670B003A1BB1 /* ConnectionCostsCompilerTests.swift */; };
 		5BF905FD1DF4D79F003A1BB1 /* ConnectionCosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF905FC1DF4D79F003A1BB1 /* ConnectionCosts.swift */; };
 		5BF905FE1DF4E11C003A1BB1 /* ConnectionCosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF905FC1DF4D79F003A1BB1 /* ConnectionCosts.swift */; };
@@ -126,6 +130,9 @@
 		5B5B58131DEB6A5B00F05C1D /* CSVParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVParserTests.swift; sourceTree = "<group>"; };
 		5B5B58171DEB907100F05C1D /* CharacterDefinitionsCompilerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDefinitionsCompilerTests.swift; sourceTree = "<group>"; };
 		5B5B58191DEB933100F05C1D /* CharacterDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDefinitions.swift; sourceTree = "<group>"; };
+		5B83B3961DFA0C160059F822 /* DictionaryField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryField.swift; sourceTree = "<group>"; };
+		5B83B3981DFA0C660059F822 /* InsertedDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertedDictionary.swift; sourceTree = "<group>"; };
+		5B83B39A1DFA0E230059F822 /* InsertedDictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertedDictionaryTests.swift; sourceTree = "<group>"; };
 		5BF905FA1DF4670B003A1BB1 /* ConnectionCostsCompilerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCostsCompilerTests.swift; sourceTree = "<group>"; };
 		5BF905FC1DF4D79F003A1BB1 /* ConnectionCosts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCosts.swift; sourceTree = "<group>"; };
 		5BFF15B21DEBB530003CAC92 /* char.def */ = {isa = PBXFileReference; fileEncoding = 3; lastKnownFileType = text; path = char.def; sourceTree = "<group>"; };
@@ -165,6 +172,7 @@
 				5BFF15BB1DEF6659003CAC92 /* WordIdMapCompilerTests.swift */,
 				5BFF15BF1DEF8C93003CAC92 /* TokenInfoBufferCompilerTests.swift */,
 				5BF905FA1DF4670B003A1BB1 /* ConnectionCostsCompilerTests.swift */,
+				5B83B39A1DFA0E230059F822 /* InsertedDictionaryTests.swift */,
 				5BFF15B11DEBB530003CAC92 /* Resources */,
 				5B2BDFC31DEB67320098CD4B /* Info.plist */,
 			);
@@ -231,13 +239,15 @@
 		5B54F9401DE219E400BB1909 /* dict */ = {
 			isa = PBXGroup;
 			children = (
+				5B5B58191DEB933100F05C1D /* CharacterDefinitions.swift */,
+				5BF905FC1DF4D79F003A1BB1 /* ConnectionCosts.swift */,
 				5B54F9411DE219E400BB1909 /* DictionaryEntryBase.swift */,
+				5B2BDFA91DEA436D0098CD4B /* DictionaryType.swift */,
 				5B54F9421DE219E400BB1909 /* GenericDictionaryEntry.swift */,
 				5B2BDFA71DEA41530098CD4B /* TokenInfoDictionary.swift */,
-				5B2BDFA91DEA436D0098CD4B /* DictionaryType.swift */,
-				5B5B58191DEB933100F05C1D /* CharacterDefinitions.swift */,
 				5BFF15B61DECEC64003CAC92 /* UnknownDictionary.swift */,
-				5BF905FC1DF4D79F003A1BB1 /* ConnectionCosts.swift */,
+				5B83B3961DFA0C160059F822 /* DictionaryField.swift */,
+				5B83B3981DFA0C660059F822 /* InsertedDictionary.swift */,
 			);
 			path = dict;
 			sourceTree = "<group>";
@@ -381,6 +391,7 @@
 				5B2BDFDE1DEB67E60098CD4B /* StringUtils.swift in Sources */,
 				5B2BDFD81DEB67E60098CD4B /* IntegerArrayIO.swift in Sources */,
 				5B2BDFD21DEB67E60098CD4B /* DictionaryEntryBase.swift in Sources */,
+				5B83B39B1DFA0E230059F822 /* InsertedDictionaryTests.swift in Sources */,
 				5B2BDFC91DEB67E60098CD4B /* StringValueMapBuffer.swift in Sources */,
 				5BFF15AF1DEBAB08003CAC92 /* CharacterDefinitions.swift in Sources */,
 				5B2BDFD51DEB67E60098CD4B /* DictionaryType.swift in Sources */,
@@ -396,6 +407,7 @@
 				5B2BDFDA1DEB67E60098CD4B /* ByteBuffer.swift in Sources */,
 				5BFF15BA1DEE421E003CAC92 /* UnknownDictionary.swift in Sources */,
 				5BFF15BC1DEF6659003CAC92 /* WordIdMapCompilerTests.swift in Sources */,
+				5B83B39C1DFA0E250059F822 /* InsertedDictionary.swift in Sources */,
 				5B2BDFD71DEB67E60098CD4B /* DataOutputStream.swift in Sources */,
 				5B5B58181DEB907100F05C1D /* CharacterDefinitionsCompilerTests.swift in Sources */,
 				5B2BDFDD1DEB67E60098CD4B /* ScriptUtils.swift in Sources */,
@@ -422,6 +434,7 @@
 				5B5B581A1DEB933100F05C1D /* CharacterDefinitions.swift in Sources */,
 				5B54F94F1DE219E400BB1909 /* StringValueMapBuffer.swift in Sources */,
 				5B2BDFA81DEA41530098CD4B /* TokenInfoDictionary.swift in Sources */,
+				5B83B3971DFA0C160059F822 /* DictionaryField.swift in Sources */,
 				5BFF15B71DECEC64003CAC92 /* UnknownDictionary.swift in Sources */,
 				5B2BDFAA1DEA436D0098CD4B /* DictionaryType.swift in Sources */,
 				5B54F9561DE219E400BB1909 /* GenericDictionaryEntry.swift in Sources */,
@@ -443,6 +456,7 @@
 				5B54F9581DE219E400BB1909 /* DataOutputStream.swift in Sources */,
 				5B2BDFA41DEA237C0098CD4B /* WordIdMapCompiler.swift in Sources */,
 				5B54F9601DE2596A00BB1909 /* ConnectionCostsCompiler.swift in Sources */,
+				5B83B3991DFA0C660059F822 /* InsertedDictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
