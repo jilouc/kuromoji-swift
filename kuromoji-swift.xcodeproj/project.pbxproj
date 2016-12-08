@@ -165,16 +165,12 @@
 		5B2BDFC01DEB67320098CD4B /* kuromoji-tests */ = {
 			isa = PBXGroup;
 			children = (
-				5B2BDFE11DEB68130098CD4B /* StringValueMapBufferTests.swift */,
-				5B5B58131DEB6A5B00F05C1D /* CSVParserTests.swift */,
-				5B5B58171DEB907100F05C1D /* CharacterDefinitionsCompilerTests.swift */,
-				5BFF15B41DECE783003CAC92 /* UnknownDictionaryCompilerTests.swift */,
-				5BFF15BB1DEF6659003CAC92 /* WordIdMapCompilerTests.swift */,
-				5BFF15BF1DEF8C93003CAC92 /* TokenInfoBufferCompilerTests.swift */,
-				5BF905FA1DF4670B003A1BB1 /* ConnectionCostsCompilerTests.swift */,
-				5B83B39A1DFA0E230059F822 /* InsertedDictionaryTests.swift */,
-				5BFF15B11DEBB530003CAC92 /* Resources */,
+				5B83B3A01DFA0EFA0059F822 /* buffer */,
+				5B83B39E1DFA0EDD0059F822 /* compile */,
+				5B83B39D1DFA0ECA0059F822 /* dict */,
+				5B83B39F1DFA0EF30059F822 /* util */,
 				5B2BDFC31DEB67320098CD4B /* Info.plist */,
+				5BFF15B11DEBB530003CAC92 /* Resources */,
 			);
 			path = "kuromoji-tests";
 			sourceTree = "<group>";
@@ -227,11 +223,11 @@
 			children = (
 				5B54F93D1DE219E400BB1909 /* CharacterDefinitionsCompiler.swift */,
 				5B54F93E1DE219E400BB1909 /* Compiler.swift */,
-				5B54F93F1DE219E400BB1909 /* UnknownDictionaryCompiler.swift */,
 				5B54F95F1DE2596A00BB1909 /* ConnectionCostsCompiler.swift */,
-				5B2BDFA31DEA237C0098CD4B /* WordIdMapCompiler.swift */,
-				5B2BDFA51DEA40C70098CD4B /* TokenInfoDictionaryCompilerBase.swift */,
 				5BFF15BD1DEF8854003CAC92 /* TokenInfoBufferCompiler.swift */,
+				5B2BDFA51DEA40C70098CD4B /* TokenInfoDictionaryCompilerBase.swift */,
+				5B54F93F1DE219E400BB1909 /* UnknownDictionaryCompiler.swift */,
+				5B2BDFA31DEA237C0098CD4B /* WordIdMapCompiler.swift */,
 			);
 			path = compile;
 			sourceTree = "<group>";
@@ -242,12 +238,12 @@
 				5B5B58191DEB933100F05C1D /* CharacterDefinitions.swift */,
 				5BF905FC1DF4D79F003A1BB1 /* ConnectionCosts.swift */,
 				5B54F9411DE219E400BB1909 /* DictionaryEntryBase.swift */,
+				5B83B3961DFA0C160059F822 /* DictionaryField.swift */,
 				5B2BDFA91DEA436D0098CD4B /* DictionaryType.swift */,
 				5B54F9421DE219E400BB1909 /* GenericDictionaryEntry.swift */,
+				5B83B3981DFA0C660059F822 /* InsertedDictionary.swift */,
 				5B2BDFA71DEA41530098CD4B /* TokenInfoDictionary.swift */,
 				5BFF15B61DECEC64003CAC92 /* UnknownDictionary.swift */,
-				5B83B3961DFA0C160059F822 /* DictionaryField.swift */,
-				5B83B3981DFA0C660059F822 /* InsertedDictionary.swift */,
 			);
 			path = dict;
 			sourceTree = "<group>";
@@ -267,14 +263,50 @@
 			isa = PBXGroup;
 			children = (
 				5B54F9491DE219E400BB1909 /* ByteBuffer.swift */,
-				5B54F9611DE25CF800BB1909 /* ShortBuffer.swift */,
 				5B54F94A1DE219E400BB1909 /* CSVParser.swift */,
-				5B54F94B1DE219E400BB1909 /* ScriptUtils.swift */,
-				5B54F94C1DE219E400BB1909 /* StringUtils.swift */,
 				5B2BDFAB1DEA4BC50098CD4B /* ResourceResolver.swift */,
+				5B54F94B1DE219E400BB1909 /* ScriptUtils.swift */,
+				5B54F9611DE25CF800BB1909 /* ShortBuffer.swift */,
 				5B2BDFAD1DEA4BF00098CD4B /* SimpleResourceResolver.swift */,
+				5B54F94C1DE219E400BB1909 /* StringUtils.swift */,
 			);
 			path = util;
+			sourceTree = "<group>";
+		};
+		5B83B39D1DFA0ECA0059F822 /* dict */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B39A1DFA0E230059F822 /* InsertedDictionaryTests.swift */,
+			);
+			name = dict;
+			sourceTree = "<group>";
+		};
+		5B83B39E1DFA0EDD0059F822 /* compile */ = {
+			isa = PBXGroup;
+			children = (
+				5B5B58171DEB907100F05C1D /* CharacterDefinitionsCompilerTests.swift */,
+				5BFF15B41DECE783003CAC92 /* UnknownDictionaryCompilerTests.swift */,
+				5BFF15BB1DEF6659003CAC92 /* WordIdMapCompilerTests.swift */,
+				5BFF15BF1DEF8C93003CAC92 /* TokenInfoBufferCompilerTests.swift */,
+				5BF905FA1DF4670B003A1BB1 /* ConnectionCostsCompilerTests.swift */,
+			);
+			name = compile;
+			sourceTree = "<group>";
+		};
+		5B83B39F1DFA0EF30059F822 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				5B5B58131DEB6A5B00F05C1D /* CSVParserTests.swift */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+		5B83B3A01DFA0EFA0059F822 /* buffer */ = {
+			isa = PBXGroup;
+			children = (
+				5B2BDFE11DEB68130098CD4B /* StringValueMapBufferTests.swift */,
+			);
+			name = buffer;
 			sourceTree = "<group>";
 		};
 		5BFF15B11DEBB530003CAC92 /* Resources */ = {
